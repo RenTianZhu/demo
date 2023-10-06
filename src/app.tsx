@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import "tailwindcss/tailwind.css"
 
 import DataComment from './datastruct.tsx'
 
@@ -11,8 +12,8 @@ import Comment from "./comment.tsx";
 export default function App() {
     const [comments, setComments] = useState<DataComment[]>([])
     return (
-        <div className={"App"}>
-            <h1 className="text-3xl font-bold underline">CIS 197 Community</h1>
+        <div className="container max-w-lg mx-auto mt-10">
+            <h1 className="text-lg text-center mb-4">🧋 KASHYAP456 COMMENTING PLATFORM 🧋</h1>
             <Submit handleSubmit={(dataComment) => {
                 setComments(preComments => [...preComments, dataComment])
             }}/>

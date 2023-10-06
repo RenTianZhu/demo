@@ -10,9 +10,9 @@ function Comment({dataComment: dataComment}) {
     const [likeCount, setLikeCount] = useState<Number>(0)
     const [comments, setComments] = useState<DataComment[]>([])
     return (
-        <div style={{marginLeft: '50px', border: '1px solid black'}}>
-            <div>{dataComment.username}</div>
-            <div>{dataComment.content}</div>
+        <div className="shadow-md p-4">
+            <div className="text-sky-400 break-words mt-2">{dataComment.username}</div>
+            <div className="break-all">{dataComment.content}</div>
             <button
                 name={"Comment"}
                 onClick={() => {

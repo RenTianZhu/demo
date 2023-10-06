@@ -9,40 +9,36 @@ function Submit(
 ) {
     const [dataComment, setDataComment] = useState<DataComment>(new DataComment("", ""))
     return (
-        <div>
-            <div>
-                <input
-                    type="text"
-                    placeholder="Name..."
-                    onChange={
-                        (e) => {
-                            setDataComment(new DataComment(e.target.value, dataComment.content))
-                        }
+        <div className="container mx-auto mb-4">
+            <input
+                className="box-border h-10 w-full rounded appearance-none border border-neutral mb-2"
+                type="text"
+                placeholder="Name..."
+                onChange={
+                    (e) => {
+                        setDataComment(new DataComment(e.target.value, dataComment.content))
                     }
-                    value={dataComment.username}
-                ></input>
-            </div>
+                }
+                value={dataComment.username}
+            ></input>
 
-            <div>
-                <input
-                    type="text"
-                    placeholder="Write a new post..."
-                    onChange={
-                        (e) => {
-                            setDataComment(new DataComment(dataComment.username, e.target.value))
-                        }
+            <textarea
+                className="box-border p-2 w-full rounded border border-red-900 mb-2"
+                placeholder="Write a new post..."
+                onChange={
+                    (e) => {
+                        setDataComment(new DataComment(dataComment.username, e.target.value))
                     }
-                    value={dataComment.content}
-                ></input>
-            </div>
+                }
+                value={dataComment.content}
+            ></textarea>
 
-            <div>
-                <button
-                    name={"submit"}
-                    onClick={() => handleSubmit(dataComment)}
-                >submit
-                </button>
-            </div>
+            <button
+                className="text-white bg-blue-500 hover:bg-blue-700 px-2 py-2 ml-auto rounded"
+                name={"submit"}
+                onClick={() => handleSubmit(dataComment)}
+            >submit
+            </button>
 
         </div>
     )
