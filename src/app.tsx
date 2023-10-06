@@ -19,7 +19,7 @@ export default function App() {
             }}/>
             {
                 comments.map((dataComment) => (
-                    <Comment dataComment={dataComment}/>
+                    <Comment key={Math.random()} dataComment={dataComment}/>
                 ))
             }
         </div>

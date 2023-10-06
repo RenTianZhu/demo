@@ -43,7 +43,7 @@ function Comment({dataComment: dataComment}) {
             />) : null}
             {
                 comments.map((dataComment) => (
-                    <Comment dataComment={dataComment}/>
+                    <Comment key={Math.random()} dataComment={dataComment}/>
                 ))
             }
         </div>
