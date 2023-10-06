@@ -14,8 +14,8 @@ export default function App() {
     return (
         <div className="container max-w-lg mx-auto mt-10">
             <h1 className="text-lg text-center mb-4">🧋 KASHYAP456 COMMENTING PLATFORM 🧋</h1>
-            <Submit handleSubmit={(dataComment) => {
-                setComments(preComments => [...preComments, dataComment])
+            <Submit handleSubmit={(callbackComment) => {
+                setComments(preComments => [...preComments, callbackComment])
             }}/>
             {
                 comments.map((dataComment) => (

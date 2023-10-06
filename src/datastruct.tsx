@@ -1,10 +1,11 @@
 class DataComment {
     username: string = "";
     content: string = "";
+    depth: number = 1;
 
     constructor(username, content) {
         this.username = username
-        this.content =content
+        this.content = content
     }
 }
 

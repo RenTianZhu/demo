@@ -28,18 +28,17 @@ function Comment({dataComment: dataComment}) {
                     </button>
                 </div>
             </div>
-
-            <button
-                className="text-white bg-green-500 hover:bg-green-700 px-2 py-2 ml-auto rounded"
-                name={"Comment"}
-                onClick={() => {
-                    setShowSubmit(!showSubmit)
-                }}
-            >Reply
-            </button>
+            {dataComment.depth < 3 &&
+                <button className="text-white bg-green-500 hover:bg-green-700 px-2 py-2 ml-auto rounded"
+                        name={"Comment"}
+                        onClick={() => {
+                            setShowSubmit(!showSubmit)
+                        }}
+                >Reply</button>}
             {showSubmit ? (<Submit
-                handleSubmit={(dataComment) => {
-                    setComments(preComments => [...preComments, dataComment])
+                handleSubmit={(callbackComment) => {
+                    callbackComment.depth = dataComment.depth + 1
+                    setComments(preComments => [...preComments, callbackComment])
                 }}
             />) : null}
             {
