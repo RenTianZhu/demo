@@ -11,7 +11,7 @@ import Comment from "./comment.tsx";
 export default function App() {
     const [comments, setComments] = useState<DataComment[]>([])
     return (
-        <div className={"App"}>
+        <div align={'center'} className={"App"}>
             <h1>CIS 197 Community</h1>
             <Submit handleSubmit={(dataComment) => {
                 setComments(preComments => [...preComments, dataComment])
