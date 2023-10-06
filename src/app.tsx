@@ -12,7 +12,7 @@ export default function App() {
     const [comments, setComments] = useState<DataComment[]>([])
     return (
         <div className={"App"}>
-            <h1 class="text-3xl font-bold underline">CIS 197 Community</h1>
+            <h1 className="text-3xl font-bold underline">CIS 197 Community</h1>
             <Submit handleSubmit={(dataComment) => {
                 setComments(preComments => [...preComments, dataComment])
             }}/>
