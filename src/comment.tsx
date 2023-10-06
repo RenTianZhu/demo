@@ -7,7 +7,7 @@ import DataComment from "./datastruct.tsx";
  */
 function Comment({dataComment: dataComment}) {
     const [showSubmit, setShowSubmit] = useState<Boolean>(false)
-    // const [likeCount, setLikeCount] = useState<Number>(0)
+    const [likeCount, setLikeCount] = useState<Number>(0)
     const [comments, setComments] = useState<DataComment[]>([])
     return (
         <div style={{marginLeft: '50px', border: '1px solid black'}}>
