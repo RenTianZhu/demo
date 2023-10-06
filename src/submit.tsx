@@ -36,7 +36,13 @@ function Submit(
             <button
                 className="text-white bg-blue-500 hover:bg-blue-700 px-2 py-2 ml-auto rounded"
                 name={"submit"}
-                onClick={() => handleSubmit(dataComment)}
+                onClick={() => {
+                    if (!dataComment.username.trim() || !dataComment.content.trim()) {
+                        alert("Name & Post content must not be null")
+                        return
+                    }
+                    handleSubmit(dataComment)
+                }}
             >submit
             </button>
 
